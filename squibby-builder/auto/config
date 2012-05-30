@@ -4,6 +4,7 @@ set -eu
 rm -rf config
 cp -a config.in config
 
+#MIRROR=http://localhost:3142/ubuntu
 MIRROR=http://archive.ubuntu.com/ubuntu
 COMPONENTS='main restricted universe multiverse'
 SUITE=`lsb_release -cs`
@@ -11,18 +12,31 @@ SUITE=`lsb_release -cs`
 lb config noauto \
         --mode ubuntu \
         --distribution $SUITE \
+	--architectures $ARCH \
         --bootstrap-keyring ubuntu-keyring \
         --binary-images iso-hybrid \
         --memtest memtest86+ \
         --source false \
         --build-with-chroot false \
         --parent-mirror-bootstrap $MIRROR \
-        --parent-archive-areas $COMPONENTS \
+        --parent-mirror-chroot-security $MIRROR \
+        --parent-mirror-chroot-backports $MIRROR \
+        --parent-mirror-chroot-volatile $MIRROR \
+        --mirror-bootstrap $MIRROR \
+        --mirror-chroot-security $MIRROR \
+        --mirror-chroot-backports $MIRROR \
+        --mirror-chroot-volatile $MIRROR \
+        --parent-mirror-binary $MIRROR \
+        --parent-mirror-binary-security $MIRROR \
+        --parent-mirror-binary-backports $MIRROR \
+        --apt-http-proxy http://localhost:3142 \
+        --tasksel tasksel \
         --package-lists none \
         --initsystem none \
         --bootloader syslinux \
         --initramfs-compression lzma
 
+#        --parent-archive-areas $COMPONENTS \
 cat > config/binary_rootfs/excludes << EOF
 boot/vmlinu?-*
 boot/initrd.img-*

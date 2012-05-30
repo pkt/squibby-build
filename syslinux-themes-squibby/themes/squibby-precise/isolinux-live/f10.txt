@@ -1,6 +1,9 @@
 0fCOPYRIGHTS AND WARRANTIES07                                                    09F1007
 
-Ubuntu is Copyright (C) 2004-2010 Canonical Ltd., and incorporates the work
+Squibby Linux is Copyright (C) 2012 by Chania LUG. It is based on
+Ubuntu http://www.ubuntu.com
+
+Ubuntu is Copyright (C) 2004-2012 Canonical Ltd., and incorporates the work
 of many other original authors and contributors.
 
 The Ubuntu system is freely redistributable. After installation, the

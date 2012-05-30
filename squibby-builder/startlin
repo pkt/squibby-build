@@ -1,0 +1,8 @@
+#!/bin/bash
+
+kvm -m 768 -net nic,model=virtio \
+	   -net tap,ifname=tap2,script=no,downscript=no \
+	   -hda testlin.img \
+           -cdrom binary-hybrid.iso -boot d
+
+# -snapshot $@

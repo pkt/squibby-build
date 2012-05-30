@@ -1,7 +1,7 @@
 0fGETTING HELP07                                                                  09F907
 
-If you can't install Ubuntu, don't despair! The Ubuntu team is ready to
-help you! We are especially interested in hearing about installation
+If you can't install Squibby, don't despair! The Squibby Linux team is
+ready to help you! We are especially interested in hearing about installation
 problems, because in general they don't happen to only 0fone07 person.
 We've either already heard about your particular problem and can dispense a
 quick fix, or we would like to hear about it and work through it with you,
